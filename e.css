@@ -1,0 +1,111 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+body{
+    min-height:100vh;
+    background:linear-gradient(
+        rgba(0,0,0,0.4),
+        rgba(0,0,0,0.4)
+    ),
+    url('https://images.unsplash.com/photo-1501785888041-af3ef285b470');
+    background-size:cover;
+    background-position:center;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+.contact-section{
+    width:100%;
+    padding:40px;
+}
+
+.contact-container{
+    max-width:1100px;
+    margin:auto;
+    background:#fff;
+    border-radius:20px;
+    overflow:hidden;
+    display:flex;
+    box-shadow:0 10px 30px rgba(0,0,0,0.2);
+}
+
+.contact-info{
+    flex:1;
+    background:#0d6efd;
+    color:white;
+    padding:50px;
+}
+
+.contact-info h1{
+    margin-bottom:20px;
+    font-size:40px;
+}
+
+.contact-info p{
+    line-height:1.8;
+}
+
+.details{
+    margin-top:30px;
+}
+
+.details p{
+    margin:15px 0;
+    font-size:18px;
+}
+
+.contact-form{
+    flex:1;
+    padding:50px;
+}
+
+.input-box{
+    margin-bottom:20px;
+}
+
+.input-box input,
+.input-box textarea{
+    width:100%;
+    padding:15px;
+    border:1px solid #ccc;
+    border-radius:10px;
+    font-size:16px;
+    outline:none;
+}
+
+.input-box input:focus,
+.input-box textarea:focus{
+    border-color:#0d6efd;
+}
+
+button{
+    width:100%;
+    padding:15px;
+    border:none;
+    background:#0d6efd;
+    color:white;
+    font-size:18px;
+    border-radius:10px;
+    cursor:pointer;
+}
+
+button:hover{
+    background:#084298;
+}
+
+@media(max-width:768px){
+
+    .contact-container{
+        flex-direction:column;
+    }
+
+    .contact-info,
+    .contact-form{
+        padding:30px;
+    }
+}

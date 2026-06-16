@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Nature Explorer - Destinations</title>
+<link rel="stylesheet" href="b.css">
+</head>
+<body>
+
+<header>
+    <h1>Explore Amazing Destinations</h1>
+    <p>Click on a destination to learn more</p>
+</header>
+
+<div class="gallery">
+
+    <div class="card" onclick="openModal('swiss')">
+        <img src="img1.jpg" alt="Swiss Alps"lenght="400" width="400">
+        <div class="card-content">
+            <h3>Swiss Alps</h3>
+        </div>
+    </div>
+
+    <div class="card" onclick="openModal('bali')">
+        <img src="img2.jpg" alt="Bali" length="400" width="400">
+        <div class="card-content">
+            <h3>Bali</h3>
+        </div>
+    </div>
+
+    <div class="card" onclick="openModal('maldives')">
+        <img src="img3.webp" alt="Maldives"length="400" width="400">
+        <div class="card-content">
+            <h3>Maldives</h3>
+        </div>
+    </div>
+
+    <div class="card" onclick="openModal('paris')">
+        <img src="img4.jpg" alt="Paris"length="400" width="400">
+        <div class="card-content">
+            <h3>Paris</h3>
+        </div>
+    </div>
+
+</div>
+
+<!-- Modal -->
+<div id="modal" class="modal">
+    <div class="modal-content">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <h2 id="title"></h2>
+        <p id="description"></p>
+    </div>
+</div>
+
+<script>
+const destinations = {
+    swiss: {
+        title: "Swiss Alps",
+        description: "Experience breathtaking mountain views, skiing adventures, charming villages, and beautiful lakes in the heart of Switzerland."
+    },
+    bali: {
+        title: "Bali, Indonesia",
+        description: "Discover tropical beaches, ancient temples, lush rice terraces, and vibrant cultural experiences."
+    },
+    maldives: {
+        title: "Maldives",
+        description: "Enjoy crystal-clear waters, luxury resorts, coral reefs, and unforgettable sunsets."
+    },
+    paris: {
+        title: "Paris, France",
+        description: "Visit iconic landmarks, world-class museums, romantic streets, and delicious French cuisine."
+    }
+};
+
+function openModal(place) {
+    document.getElementById("title").innerText = destinations[place].title;
+    document.getElementById("description").innerText = destinations[place].description;
+    document.getElementById("modal").style.display = "flex";
+}
+
+function closeModal() {
+    document.getElementById("modal").style.display = "none";
+}
+
+window.onclick = function(event) {
+    const modal = document.getElementById("modal");
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+}
+</script>
+
+</body>
+</html>

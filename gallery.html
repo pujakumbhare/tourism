@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nature Explorer - Gallery</title>
+    <link rel="stylesheet" href="d.css">
+</head>
+<body>
+
+    <header class="gallery-header">
+        <h1>Travel Gallery</h1>
+        <p>Explore beautiful destinations from around the world</p>
+    </header>
+
+    <section class="gallery">
+
+        <div class="gallery-item">
+            <img src="img5.jpg" alt="Mountains"length="400" width="400">
+        </div>
+
+        <div class="gallery-item">
+            <img src="img6.jpg" alt="Beach"length="400" width="400">
+        </div>
+
+        <div class="gallery-item">
+            <img src="img7.jpg" alt="Safari"length="400" width="400">
+        </div>
+
+        <div class="gallery-item">
+            <img src="img8.jpg" alt="Forest"length="400" width="400">
+        </div>
+
+        <div class="gallery-item">
+            <img src="img9.webp" alt="Waterfall"length="400" width="400">
+        </div>
+
+        <div class="gallery-item">
+            <img src="img10.jpg" alt="Lake"length="400" width="400">
+        </div>
+
+        <div class="gallery-item">
+            <img src="img11.jpg" alt="Nature"length="400" width="400">
+        </div>
+
+        <div class="gallery-item">
+            <img src="img12.avif" alt="Adventure"length="400" width="400">
+        </div>
+
+    </section>
+
+    <!-- Lightbox -->
+    <div id="lightbox">
+        <span id="closeBtn">&times;</span>
+        <img id="lightboxImg">
+    </div>
+
+<script>
+const galleryImages = document.querySelectorAll('.gallery-item img');
+const lightbox = document.getElementById('lightbox');
+const lightboxImg = document.getElementById('lightboxImg');
+const closeBtn = document.getElementById('closeBtn');
+
+galleryImages.forEach(image => {
+    image.addEventListener('click', () => {
+        lightbox.style.display = 'flex';
+        lightboxImg.src = image.src;
+    });
+});
+
+closeBtn.addEventListener('click', () => {
+    lightbox.style.display = 'none';
+});
+
+lightbox.addEventListener('click', () => {
+    lightbox.style.display = 'none';
+});
+</script>
+
+</body>
+</html>

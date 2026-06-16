@@ -1,0 +1,12 @@
+<svg width="500" height="180" viewBox="0 0 500 180" xmlns="http://www.w3.org/2000/svg">
+  <circle cx="250" cy="55" r="22" fill="#FFC107"></circle>
+
+  <polygon points="130,100 190,30 250,100" fill="#2E8B57"></polygon>
+  <polygon points="210,100 290,15 370,100" fill="#3CB371"></polygon>
+
+  <path d="M80 120 C160 100, 250 145, 420 115" stroke="#4FC3F7" stroke-width="10" fill="none" stroke-linecap="round"></path>
+
+  <text x="250" y="150" text-anchor="middle" font-size="34" font-family="Arial, sans-serif" font-weight="bold" fill="#2E8B57">
+        NATURE EXPLORER
+  </text>
+</svg>
